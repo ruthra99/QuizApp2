@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+            maven 'local-maven'
+        }
+
     environment {
         IMAGE_NAME = 'quizapp-local'
         CONTAINER_NAME = 'quizapp-container'
